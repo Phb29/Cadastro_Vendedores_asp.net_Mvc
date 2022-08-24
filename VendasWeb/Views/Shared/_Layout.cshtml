@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SalesWebMvc</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-flaty.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <style>
+        #a{
+            z-index:100; 
+            color:black;
+            border:solid 1px;
+            border-radius:5px;
+
+
+        }
+    </style>
+  
+            <div  class="navbar-collapse collapse">
+                <ul  class="nav navbar-nav">
+                   
+                    <li><a id="a"  asp-area="" asp-controller="Departments" asp-action="Index">Departamento</a></li>
+                     <li><a id="a"  asp-area="" asp-controller="Sellers" asp-action="Index">Vendedores</a></li>
+                    <li><a id="a"  asp-area="" asp-controller="SalesRecords" asp-action="Index"> Histórico Vendas </a></li>
+                 
+                </u>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <div class="container body-content">
+        @RenderBody()
+       
+        <hr />
+        <footer>
+            
+        </footer>
+    </div>
+
+    
+</body>
+</html>
